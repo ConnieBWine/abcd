@@ -1,0 +1,230 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.active-bids {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    margin-left: 300px;
+}
+
+/* Header styles */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #4a6ee0;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    margin-left: 0.5rem;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* Sidebar styles */
+.sidebar {
+    width: 200px;
+    background-color: #f5f5f5;
+    padding: 1rem;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    margin-bottom: 1rem;
+    cursor: pointer;
+}
+
+.sidebar li.active {
+    color: #4a6ee0;
+    font-weight: bold;
+}
+
+/* Main content styles */
+.main-content {
+    display: flex;
+    margin-top: 60px;
+    flex-grow: 1;
+}
+
+.content-area {
+    flex-grow: 1;
+    padding: 2rem;
+}
+
+.bids-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.bids-header p {
+    color: #888;
+    margin-top: 0.5rem;
+}
+
+.export-btn {
+    background-color: #4a6ee0;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.auction-section {
+    margin-top: 2rem;
+}
+
+.filter-btn {
+    background-color: #fff;
+    border: 1px solid #4a6ee0;
+    color: #4a6ee0;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+}
+
+/* Auction grid styles */
+.auction-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);    gap: 2rem;
+    margin-top: 1rem;
+
+}
+
+.auction-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.auction-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.car-info {
+    padding: 1rem;
+}
+
+.car-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.car-location {
+    color: #888;
+    margin-bottom: 0.5rem;
+}
+
+.car-details {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.car-prices {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.current-price {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #4a6ee0;
+}
+
+.bid-price {
+    color: #888;
+}
+
+.bid-button {
+    width: 100%;
+    background-color: #4a6ee0;
+    color: #fff;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Dark theme */
+.active-bids.dark {
+    background-color: #1a1a1a;
+    color: #fff;
+    margin-left: 280px;
+}
+
+.active-bids.dark .header,
+.active-bids.dark .sidebar,
+.active-bids.dark .auction-card {
+    background-color: #2a2a2a;
+    color: #fff;
+}
+
+.active-bids.dark .search-bar {
+    background-color: #3a3a3a;
+}
+
+.active-bids.dark .export-btn,
+.active-bids.dark .bid-button {
+    background-color: #6a8ee0;
+}
+
+.active-bids.dark .filter-btn {
+    background-color: #2a2a2a;
+    border-color: #6a8ee0;
+    color: #6a8ee0;
+}
+
+.active-bids.dark .car-details,
+.active-bids.dark .car-location,
+.active-bids.dark .bid-price {
+    color: #bbb;
+}

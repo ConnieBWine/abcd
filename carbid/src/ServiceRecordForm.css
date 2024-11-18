@@ -1,0 +1,383 @@
+/* Service Center Registration Styles */
+
+/* Base layout with sidebar */
+.registration-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+    margin-left: 280px;
+    /* Account for sidebar width */
+    padding: 2rem;
+    margin-top: 80px;
+    /* Account for header height */
+    transition: margin-left 0.3s ease;
+}
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 16rem;
+    z-index: 40;
+}
+/* Main content box */
+.registration-box {
+    flex: 1;
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.registration-box h2 {
+    font-size: 1.8rem;
+    color: #1a202c;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Form styling */
+.registration-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 500;
+    color: #374151;
+    font-size: 0.95rem;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    background-color: #f9fafb;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #4a6ee0;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(74, 110, 224, 0.1);
+    outline: none;
+}
+
+.form-group textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+/* Wallet address display */
+.wallet-address {
+    font-family: monospace;
+    background-color: #f8fafc !important;
+    color: #1a202c;
+    cursor: not-allowed;
+}
+
+/* Document upload section */
+.document-upload {
+    border: 2px dashed #e5e7eb;
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.document-upload:hover {
+    border-color: #4a6ee0;
+    background-color: rgba(74, 110, 224, 0.05);
+}
+
+.upload-label {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+}
+
+.upload-icon {
+    font-size: 2rem;
+    color: #4a6ee0;
+}
+
+.upload-label span {
+    color: #4b5563;
+    font-weight: 500;
+}
+
+.uploaded-files {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    background-color: #f8fafc;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    color: #374151;
+}
+
+.file-item svg {
+    color: #10b981;
+}
+
+/* Button styling */
+.submit-button {
+    background-color: #4a6ee0;
+    color: white;
+    border: none;
+    padding: 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    margin-top: 1rem;
+}
+
+.submit-button:hover:not(:disabled) {
+    background-color: #3d5bb3;
+    transform: translateY(-1px);
+}
+
+.submit-button:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+}
+
+/* Messages */
+.error-message {
+    background-color: #fee2e2;
+    color: #991b1b;
+    padding: 1rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.approved-message {
+    text-align: center;
+    padding: 4rem 2rem;
+}
+
+.approved-icon {
+    font-size: 4rem;
+    color: #10b981;
+    margin-bottom: 1.5rem;
+}
+
+.approved-message h2 {
+    color: #065f46;
+    margin-bottom: 0.5rem;
+}
+
+.approved-message p {
+    color: #047857;
+}
+
+/* Hidden elements */
+.hidden {
+    display: none;
+}
+
+/* Loading states */
+.submit-button.loading {
+    position: relative;
+    color: transparent;
+}
+
+.submit-button.loading::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 2px solid white;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+    .registration-container {
+        margin-left: 80px;
+        /* Collapsed sidebar width */
+    }
+
+    .registration-box {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .registration-container {
+        margin-left: 0;
+        padding: 1rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .registration-box {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .registration-container {
+        padding: 0.5rem;
+        margin-top: 60px;
+    }
+
+    .registration-box h2 {
+        font-size: 1.5rem;
+    }
+
+    .registration-box {
+        padding: 1rem;
+    }
+}
+.error-boundary {
+    padding: 2rem;
+    margin: 1rem;
+    background-color: #fee2e2;
+    border: 1px solid #ef4444;
+    border-radius: 8px;
+    color: #991b1b;
+}
+
+.error-message {
+    padding: 1rem;
+    margin: 1rem 0;
+    background-color: #fee2e2;
+    border-radius: 8px;
+    color: #991b1b;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+/* Print styles */
+@media print {
+    .registration-container {
+        margin: 0;
+        padding: 0;
+    }
+
+    .sidebar,
+    .document-upload,
+    .submit-button {
+        display: none;
+    }
+}
+
+.service-record-page {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+}
+
+.service-record-content {
+    flex: 1;
+    margin-left: 280px;
+    /* Match sidebar width */
+    padding: 2rem;
+    margin-top: 80px;
+    /* Account for header height */
+}
+
+.service-record-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* Keep your existing styles and update any conflicting ones */
+.service-record-box {
+    padding: 2.5rem;
+}
+
+.unauthorized-message {
+    text-align: center;
+    padding: 2rem;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.unauthorized-message h2 {
+    color: #4a6ee0;
+    margin-bottom: 1rem;
+}
+
+.unauthorized-message p {
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+.register-button {
+    background: #4a6ee0;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.register-button:hover {
+    background: #3d5bb3;
+}
+
+/* Dark theme support */
+.service-record-page.dark {
+    background-color: #1a1a1a;
+}
+
+.service-record-page.dark .service-record-container,
+.service-record-page.dark .unauthorized-message {
+    background-color: #2d3748;
+    color: #f7fafc;
+}

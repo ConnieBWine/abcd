@@ -1,0 +1,232 @@
+.statistics-page {
+    display: flex;
+    background-color: #f5f6fa;
+}
+
+.statistics-content {
+    flex-grow: 1;
+    margin-left: 340px;
+    padding: 20px;
+    margin-top: 100px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 20px;
+    padding: 5px 15px;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    margin-left: 10px;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.notification-button {
+    background: none;
+    border: none;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.user-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-name {
+    margin-right: 20px;
+}
+
+.statistics-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.statistics-header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.statistics-header p {
+    color: #666;
+    margin: 5px 0 0;
+}
+
+.export-button {
+    background-color: #4a6ee0;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.statistics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.analytics-section,
+.breakdown-section,
+.cars-used-section,
+.breakdown-period-section {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.section-header select {
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.breakdown-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.breakdown-table th,
+.breakdown-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.breakdown-table th {
+    font-weight: bold;
+    color: #666;
+}
+
+.cars-used-chart {
+    display: flex;
+    flex-direction: column;
+}
+
+.car-usage {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.car-name {
+    width: 120px;
+    font-weight: bold;
+}
+
+.usage-bar-container {
+    flex-grow: 1;
+    height: 20px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    position: relative;
+}
+
+.usage-bar {
+    height: 100%;
+    background-color: #4a6ee0;
+    border-radius: 10px;
+}
+
+.usage-hours {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #666;
+}
+
+.breakdown-period-content {
+    display: flex;
+    align-items: center;
+}
+
+.total-period {
+    margin-left: 20px;
+}
+
+.total-period h3 {
+    font-size: 18px;
+    margin: 0;
+}
+
+.total-period p {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 5px 0 0;
+}
+
+.breakdown-period-legend {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.breakdown-period-legend div {
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+}
+
+.legend-color {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+@media (max-width: 1200px) {
+    .statistics-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .statistics-content {
+        margin-left: 0;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .header-right {
+        width: 100%;
+        justify-content: space-between;
+    }
+}

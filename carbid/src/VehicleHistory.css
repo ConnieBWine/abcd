@@ -1,0 +1,205 @@
+/* VehicleHistory.css */
+.vehicle-history-page {
+    display: flex;
+    min-height: 100vh;
+    background-color: #f3f4f6;
+}
+
+.vehicle-history-content {
+    flex: 1;
+    margin-left: 280px;
+    padding: 2rem;
+    margin-top: 80px;
+}
+
+.search-section {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.search-section h1 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.search-description {
+    color: #6b7280;
+    margin-bottom: 1.5rem;
+}
+
+.vin-search-form {
+    display: flex;
+    gap: 1rem;
+    max-width: 800px;
+}
+
+.search-input-container {
+    flex: 1;
+    position: relative;
+}
+
+.vin-search-input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.2s;
+}
+
+.vin-search-input:focus {
+    border-color: #4a6ee0;
+    box-shadow: 0 0 0 3px rgba(74, 110, 224, 0.1);
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+}
+
+.clear-icon {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.2s;
+}
+
+.clear-icon:hover {
+    background: #f3f4f6;
+    color: #4b5563;
+}
+
+.search-button {
+    padding: 0 2rem;
+    background: #4a6ee0;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-left: 70px;
+}
+
+.search-button:hover {
+    background: #3d5bb3;
+}
+
+.error-message {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem;
+    background: #fee2e2;
+    color: #991b1b;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.loading-spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 3rem;
+}
+
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid #e5e7eb;
+    border-top-color: #4a6ee0;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.history-results {
+    background: white;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.no-records {
+    text-align: center;
+    padding: 2rem;
+    color: #6b7280;
+    background: #f9fafb;
+    border-radius: 8px;
+    border: 1px dashed #e5e7eb;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Keep existing timeline styles but update colors and shadows */
+.timeline-item {
+    position: relative;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+    border-left: 2px solid #e5e7eb;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: -1rem;
+    width: 2rem;
+    height: 2rem;
+    background: white;
+    border: 2px solid #4a6ee0;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4a6ee0;
+}
+
+.timeline-marker.accident {
+    border-color: #ef4444;
+    color: #ef4444;
+}
+
+.document-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #4a6ee0;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    background: rgba(74, 110, 224, 0.1);
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.document-link:hover {
+    background: rgba(74, 110, 224, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+    .vin-search-form {
+        flex-direction: column;
+    }
+
+    .vehicle-history-content {
+        margin-left: 0;
+        padding: 1rem;
+    }
+}
